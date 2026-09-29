@@ -72,7 +72,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
 
   const getTargetWhatsAppNumber = () => {
     if (level === 'inicial') return '5492214091176'; // Jardin 44
-    return '5492214215224'; // Primaria 40
+    return '5492216693513'; // Primaria 40
   };
 
   const formatSummaryMessage = () => {
@@ -442,8 +442,8 @@ Quisiera consultar vacantes para: ${levelLabel}
 
                   <div className="flex items-center gap-3">
                     <Phone className="w-4 h-4 text-blue-600 shrink-0" />
-                    <a href="tel:02214215224" className="font-bold text-slate-900 hover:text-blue-700">
-                      0221-4215224
+                    <a href="https://wa.me/5492216693513" target="_blank" rel="noopener noreferrer" className="font-bold text-slate-900 hover:text-blue-700">
+                      221-6693513
                     </a>
                   </div>
 
@@ -472,7 +472,7 @@ Quisiera consultar vacantes para: ${levelLabel}
 
               <div className="mt-6 pt-4 border-t border-slate-100">
                 <a
-                  href="https://wa.me/5492214215224?text=Hola%20Colegio%20Benito%20Quinquela!%20Quisiera%20consultar%20por%20vacantes%20para%20Nivel%20Primario."
+                  href="https://wa.me/5492216693513?text=Hola%20Colegio%20Benito%20Quinquela!%20Quisiera%20consultar%20por%20vacantes%20para%20Nivel%20Primario."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full py-3 px-4 text-center text-xs font-bold text-blue-900 bg-blue-50 hover:bg-blue-100 border border-blue-300 rounded-xl flex items-center justify-center gap-2 transition-colors cursor-pointer"

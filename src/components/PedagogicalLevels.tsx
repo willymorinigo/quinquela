@@ -179,7 +179,7 @@ export const PedagogicalLevels: React.FC<PedagogicalLevelsProps> = ({
                 <span aria-hidden="true" className="text-slate-300">·</span>
                 <span>La Plata</span>
                 <span aria-hidden="true" className="text-slate-300">·</span>
-                <span>Tel: 0221-4215224</span>
+                <span>Tel / WhatsApp: 221-6693513</span>
               </div>
             </div>
 

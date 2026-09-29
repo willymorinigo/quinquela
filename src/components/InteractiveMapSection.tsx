@@ -55,8 +55,8 @@ export const InteractiveMapSection: React.FC = () => {
       // Google Maps Embed with exact GPS coordinate pin
       embedMapUrl: 'https://maps.google.com/maps?q=-34.908613,-57.961340&t=&z=17&ie=UTF8&iwloc=B&output=embed',
       googleMapsUrl: 'https://www.google.com/maps?q=-34.908613,-57.961340',
-      phone: '0221-4215224',
-      phoneClean: '5492214215224',
+      phone: '221-6693513',
+      phoneClean: '5492216693513',
       email: 'quinquelacolegio@gmail.com',
       hours: 'Lunes a Viernes de 07:45 a 16:45 hs (Secretaría hasta 16:30 hs)',
       transit: 'Líneas por Av. 7 (273, 214, Sur, Norte) a solo 1 cuadra y media; corredores de Plaza Olazábal.',

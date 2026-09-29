@@ -117,7 +117,7 @@ export const FloatingWhatsApp: React.FC<FloatingWhatsAppProps> = ({
 
             {/* Level 2: Nivel Primario */}
             <div
-              onClick={() => handleOpenChat('5492214215224', 'Colegio Primario')}
+              onClick={() => handleOpenChat('5492216693513', 'Colegio Primario')}
               className="group p-3.5 rounded-xl border border-blue-200/90 hover:border-blue-500 bg-blue-50/40 hover:bg-blue-50 transition-all cursor-pointer flex items-center justify-between"
             >
               <div className="flex items-center gap-3">
@@ -129,7 +129,7 @@ export const FloatingWhatsApp: React.FC<FloatingWhatsAppProps> = ({
                     Nivel Primario (Colegio)
                   </div>
                   <div className="text-sm font-extrabold text-slate-900 leading-tight">
-                    0221-4215224
+                    221-6693513
                   </div>
                   <div className="text-[11px] text-slate-500 mt-0.5">
                     Calle 40 Nº 669 · 1º a 6º año

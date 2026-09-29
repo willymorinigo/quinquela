@@ -95,7 +95,7 @@ export const Footer: React.FC<FooterProps> = ({
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-blue-400 shrink-0" />
-                <a href="tel:02214215224" className="hover:text-white">0221-4215224</a>
+                <a href="https://wa.me/5492216693513" target="_blank" rel="noopener noreferrer" className="hover:text-white">221-6693513</a>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-blue-400 shrink-0" />
