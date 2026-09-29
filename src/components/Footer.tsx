@@ -65,11 +65,11 @@ export const Footer: React.FC<FooterProps> = ({
             <div className="space-y-2 text-xs text-slate-300">
               <div className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
-                <span>Calle 44 Nº 759 (entre 10 y 11), La Plata</span>
+                <span>Calle 44 N° 759 (10 y 11), La Plata</span>
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-emerald-500 shrink-0" />
-                <a href="tel:2214091176" className="hover:text-white">221-4091176</a>
+                <a href="https://wa.me/5492214091176" target="_blank" rel="noopener noreferrer" className="hover:text-white">221-4091176</a>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-emerald-500 shrink-0" />
@@ -78,7 +78,7 @@ export const Footer: React.FC<FooterProps> = ({
                 </a>
               </div>
               <div className="pt-1 text-[11px] text-slate-400">
-                Salas de 2, 3, 4 y 5 años · Turnos Mañana y Tarde
+                Salas de 2, 3, 4 y 5 · Jornada: Simple, Extendida y Completa
               </div>
             </div>
           </div>
@@ -91,7 +91,7 @@ export const Footer: React.FC<FooterProps> = ({
             <div className="space-y-2 text-xs text-slate-300">
               <div className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-blue-400 shrink-0 mt-0.5" />
-                <span>Calle 40 Nº 669 (entre 8 y 9), La Plata</span>
+                <span>Calle 40 N° 669 (8 y 9), La Plata</span>
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-blue-400 shrink-0" />
@@ -99,12 +99,12 @@ export const Footer: React.FC<FooterProps> = ({
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-blue-400 shrink-0" />
-                <a href="mailto:quinquelacolegio@gmail.com" className="hover:text-white truncate">
-                  quinquelacolegio@gmail.com
+                <a href="mailto:quinquelasecretaria@gmail.com" className="hover:text-white truncate">
+                  quinquelasecretaria@gmail.com
                 </a>
               </div>
               <div className="pt-1 text-[11px] text-slate-400">
-                1º a 6º año · Doble lengua, Robótica & Talleres
+                De 1° a 6° grado · Jornada: Simple y Completa
               </div>
             </div>
           </div>

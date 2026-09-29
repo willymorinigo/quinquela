@@ -12,7 +12,8 @@ import {
   Facebook, 
   Instagram,
   GraduationCap,
-  Baby
+  Baby,
+  ChevronDown
 } from 'lucide-react';
 import { LogoInicial, LogoPrimaria } from './Logo.tsx';
 
@@ -29,7 +30,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
   const [email, setEmail] = useState('');
   const [studentName, setStudentName] = useState('');
   const [selectedClass, setSelectedClass] = useState('Sala de 3 años');
-  const [shift, setShift] = useState<'manana' | 'tarde' | 'indistinto'>('manana');
+  const [shift, setShift] = useState<'manana' | 'tarde' | 'extendida' | 'completa'>('manana');
   const [message, setMessage] = useState('');
   
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -79,7 +80,13 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
     const levelLabel = level === 'inicial' 
       ? 'Nivel Inicial (Jardín Calle 44)' 
       : 'Nivel Primario (Colegio Calle 40)';
-    const shiftLabel = shift === 'manana' ? 'Turno Mañana' : shift === 'tarde' ? 'Turno Tarde' : 'Turno Indistinto / Jornada Completa';
+    const shiftLabel = shift === 'manana' 
+      ? 'Jornada Simple (Turno Mañana)' 
+      : shift === 'tarde' 
+      ? 'Jornada Simple (Turno Tarde)' 
+      : shift === 'extendida' 
+      ? 'Jornada Extendida' 
+      : 'Jornada Completa';
 
     return `Hola Colegio Benito Quinquela!
 Quisiera consultar vacantes para: ${levelLabel}
@@ -283,40 +290,57 @@ Quisiera consultar vacantes para: ${levelLabel}
                         {level === 'inicial' ? 'Nivel Inicial' : 'Nivel Primario'}
                       </span>
                     </label>
-                    <select
-                      value={selectedClass}
-                      onChange={(e) => setSelectedClass(e.target.value)}
-                      className="w-full px-3.5 py-2.5 bg-white border border-slate-300 rounded-xl text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-600/30 focus:border-blue-600 cursor-pointer font-medium"
-                    >
-                      {level === 'inicial' ? (
-                        salitasInicial.map((salita) => (
-                          <option key={salita} value={salita}>
-                            {salita}
-                          </option>
-                        ))
-                      ) : (
-                        gradosPrimaria.map((grado) => (
-                          <option key={grado} value={grado}>
-                            {grado}
-                          </option>
-                        ))
-                      )}
-                    </select>
+                    <div className="relative">
+                      <select
+                        value={selectedClass}
+                        onChange={(e) => setSelectedClass(e.target.value)}
+                        className="w-full pl-3.5 pr-10 py-2.5 bg-white border border-slate-300 rounded-xl text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-600/30 focus:border-blue-600 cursor-pointer font-medium appearance-none"
+                      >
+                        {level === 'inicial' ? (
+                          salitasInicial.map((salita) => (
+                            <option key={salita} value={salita}>
+                              {salita}
+                            </option>
+                          ))
+                        ) : (
+                          gradosPrimaria.map((grado) => (
+                            <option key={grado} value={grado}>
+                              {grado}
+                            </option>
+                          ))
+                        )}
+                      </select>
+                      <ChevronDown className="w-4 h-4 text-slate-500 absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
+                    </div>
                   </div>
 
                   <div>
                     <label className="block text-xs font-semibold text-slate-700 mb-1">
-                      Turno Preferido
+                      Jornada / Turno Preferido
                     </label>
-                    <select
-                      value={shift}
-                      onChange={(e) => setShift(e.target.value as any)}
-                      className="w-full px-3.5 py-2.5 bg-white border border-slate-300 rounded-xl text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-600/30 focus:border-blue-600 cursor-pointer"
-                    >
-                      <option value="manana">Turno Mañana</option>
-                      <option value="tarde">Turno Tarde</option>
-                      <option value="indistinto">Indistinto / Jornada Completa</option>
-                    </select>
+                    <div className="relative">
+                      <select
+                        value={shift}
+                        onChange={(e) => setShift(e.target.value as any)}
+                        className="w-full pl-3.5 pr-10 py-2.5 bg-white border border-slate-300 rounded-xl text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-600/30 focus:border-blue-600 cursor-pointer appearance-none"
+                      >
+                        {level === 'inicial' ? (
+                          <>
+                            <option value="manana">Jornada Simple (Turno Mañana)</option>
+                            <option value="tarde">Jornada Simple (Turno Tarde)</option>
+                            <option value="extendida">Jornada Extendida</option>
+                            <option value="completa">Jornada Completa</option>
+                          </>
+                        ) : (
+                          <>
+                            <option value="manana">Jornada Simple (Turno Mañana)</option>
+                            <option value="tarde">Jornada Simple (Turno Tarde)</option>
+                            <option value="completa">Jornada Completa</option>
+                          </>
+                        )}
+                      </select>
+                      <ChevronDown className="w-4 h-4 text-slate-500 absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
+                    </div>
                   </div>
                 </div>
 
@@ -380,7 +404,7 @@ Quisiera consultar vacantes para: ${levelLabel}
                   <div className="flex items-start gap-3">
                     <MapPin className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
                     <div>
-                      <span className="font-bold text-slate-900">Calle 44 Nº 759 (entre 10 y 11)</span>
+                      <span className="font-bold text-slate-900">Calle 44 N° 759 (10 y 11)</span>
                       <div className="text-slate-500">La Plata, Buenos Aires</div>
                     </div>
                   </div>
@@ -394,7 +418,7 @@ Quisiera consultar vacantes para: ${levelLabel}
 
                   <div className="flex items-center gap-3">
                     <Phone className="w-4 h-4 text-emerald-600 shrink-0" />
-                    <a href="tel:2214091176" className="font-bold text-slate-900 hover:text-emerald-700">
+                    <a href="https://wa.me/5492214091176" target="_blank" rel="noopener noreferrer" className="font-bold text-slate-900 hover:text-emerald-700">
                       221-4091176
                     </a>
                   </div>
@@ -435,9 +459,16 @@ Quisiera consultar vacantes para: ${levelLabel}
                   <div className="flex items-start gap-3">
                     <MapPin className="w-4 h-4 text-blue-600 shrink-0 mt-0.5" />
                     <div>
-                      <span className="font-bold text-slate-900">Calle 40 Nº 669 (entre 8 y 9)</span>
+                      <span className="font-bold text-slate-900">Calle 40 N° 669 (8 y 9)</span>
                       <div className="text-slate-500">La Plata, Buenos Aires</div>
                     </div>
+                  </div>
+
+                  <div className="flex items-center gap-3">
+                    <Mail className="w-4 h-4 text-blue-600 shrink-0" />
+                    <a href="mailto:quinquelasecretaria@gmail.com" className="font-semibold text-blue-700 hover:underline">
+                      quinquelasecretaria@gmail.com
+                    </a>
                   </div>
 
                   <div className="flex items-center gap-3">
@@ -449,13 +480,7 @@ Quisiera consultar vacantes para: ${levelLabel}
 
                   <div className="space-y-1 pl-7 border-l-2 border-slate-100 pt-1">
                     <div className="flex items-center justify-between text-[11px]">
-                      <span className="text-slate-500">Dirección:</span>
-                      <a href="mailto:quinquelacolegio@gmail.com" className="font-medium text-blue-700 hover:underline">
-                        quinquelacolegio@gmail.com
-                      </a>
-                    </div>
-                    <div className="flex items-center justify-between text-[11px] pt-0.5">
-                      <span className="text-slate-500">Secretaría:</span>
+                      <span className="text-slate-500">Secretaría / Informes:</span>
                       <a href="mailto:quinquelasecretaria@gmail.com" className="font-medium text-blue-700 hover:underline">
                         quinquelasecretaria@gmail.com
                       </a>

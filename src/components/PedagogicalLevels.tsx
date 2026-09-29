@@ -21,24 +21,23 @@ export const PedagogicalLevels: React.FC<PedagogicalLevelsProps> = ({
   onSelectLevelForContact,
 }) => {
   const inicialFeatures = [
-    'Salas maternal y de infantes: 2, 3, 4 y 5 años con mobiliario adaptado.',
+    'Salas de 2, 3, 4 y 5 años con mobiliario e instalaciones adaptadas.',
+    'Jornada optativa: Simple, Extendida y Completa para adaptarse a las necesidades familiares.',
     'Pedagogía del juego, la exploración sensorial y el descubrimiento continuo.',
     'Iniciación artística intensiva inspirada en Quinquela Martín (dibujo, pintura, modelado).',
-    'Taller de Huerta infantil: contacto directo con la tierra, siembra y cuidado del entorno.',
+    'Taller de Huerta infantil: contacto directo con la tierra, siembra y cuidado ambiental.',
     'Iniciación temprana al idioma inglés a través de rimas, canciones y cuentos.',
     'Estimulación corporal y psicomotricidad en patios amplios y seguros.',
-    'Educación emocional y acompañamiento cariñoso para una adaptación respetuosa.',
   ];
 
   const primarioFeatures = [
-    'Ciclo completo de 1º a 6º año de Educación Primaria.',
+    'Ciclo completo de 1º a 6º grado de Educación Primaria.',
+    'Jornada optativa: Simple y Completa con acompañamiento pedagógico enriquecido.',
     'Sólida base en Prácticas del Lenguaje, Matemática reflexiva y Ciencias.',
     'Doble formación lingüística: intensificación en Inglés y taller de Italiano.',
     'Robótica educativa y pensamiento computacional aplicados a proyectos reales.',
     'Talleres artísticos integrados: Arte visual, Teatro, Danza y Música instrumental.',
     'Formación inclusiva y ciudadana: Taller formativo de Lengua de Señas.',
-    'Bienestar integral infantil con talleres de Yoga escolar e Iniciación deportiva.',
-    'Articulación garantizada y cuidada hacia el ingreso al nivel secundario.',
   ];
 
   return (
@@ -81,7 +80,7 @@ export const PedagogicalLevels: React.FC<PedagogicalLevelsProps> = ({
                 </div>
                 <div className="text-right text-xs font-semibold text-slate-500">
                   <div>Salas de 2, 3, 4 y 5 años</div>
-                  <div className="text-emerald-700 font-bold">Turno Mañana y Tarde</div>
+                  <div className="text-emerald-700 font-bold">Simple, Extendida y Completa</div>
                 </div>
               </div>
 
@@ -92,11 +91,11 @@ export const PedagogicalLevels: React.FC<PedagogicalLevelsProps> = ({
               {/* Location metadata */}
               <div className="mt-4 pt-3 border-t border-emerald-100/60 flex items-center flex-wrap gap-2 text-xs text-slate-600">
                 <MapPin className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
-                <span className="font-semibold text-slate-800">Calle 44 #759 (entre 10 y 11)</span>
+                <span className="font-semibold text-slate-800">Calle 44 N° 759 (10 y 11)</span>
                 <span aria-hidden="true" className="text-slate-300">·</span>
                 <span>La Plata</span>
                 <span aria-hidden="true" className="text-slate-300">·</span>
-                <span>Tel: 221-4091176</span>
+                <span>WhatsApp: 221-4091176</span>
               </div>
             </div>
 
@@ -111,7 +110,7 @@ export const PedagogicalLevels: React.FC<PedagogicalLevelsProps> = ({
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-4">
                 <span className="text-xs font-semibold text-white drop-shadow-sm flex items-center gap-1.5">
                   <Clock className="w-3.5 h-3.5 text-emerald-300" />
-                  Turnos Mañana y Tarde · Calle 44
+                  Jornada: Simple, Extendida y Completa · Calle 44
                 </span>
               </div>
             </div>
@@ -163,8 +162,8 @@ export const PedagogicalLevels: React.FC<PedagogicalLevelsProps> = ({
                   </div>
                 </div>
                 <div className="text-right text-xs font-semibold text-slate-500">
-                  <div>1º a 6º Año</div>
-                  <div className="text-blue-700 font-bold">Talleres Integrados</div>
+                  <div>De 1º a 6º grado</div>
+                  <div className="text-blue-700 font-bold">Simple y Completa</div>
                 </div>
               </div>
 
@@ -175,11 +174,11 @@ export const PedagogicalLevels: React.FC<PedagogicalLevelsProps> = ({
               {/* Location metadata */}
               <div className="mt-4 pt-3 border-t border-blue-100/60 flex items-center flex-wrap gap-2 text-xs text-slate-600">
                 <MapPin className="w-3.5 h-3.5 text-blue-600 shrink-0" />
-                <span className="font-semibold text-slate-800">Calle 40 #669 (entre 8 y 9)</span>
+                <span className="font-semibold text-slate-800">Calle 40 N° 669 (8 y 9)</span>
                 <span aria-hidden="true" className="text-slate-300">·</span>
                 <span>La Plata</span>
                 <span aria-hidden="true" className="text-slate-300">·</span>
-                <span>Tel / WhatsApp: 221-6693513</span>
+                <span>WhatsApp: 221-6693513</span>
               </div>
             </div>
 
@@ -194,7 +193,7 @@ export const PedagogicalLevels: React.FC<PedagogicalLevelsProps> = ({
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-4">
                 <span className="text-xs font-semibold text-white drop-shadow-sm flex items-center gap-1.5">
                   <Clock className="w-3.5 h-3.5 text-sky-300" />
-                  Turnos Mañana y Tarde · Calle 40
+                  Jornada: Simple y Completa · Calle 40
                 </span>
               </div>
             </div>
