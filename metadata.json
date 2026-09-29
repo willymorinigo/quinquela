@@ -1,0 +1,6 @@
+{
+  "name": "Colegio Benito Quinquela | Nivel Inicial y Primario",
+  "description": "Sitio oficial del Colegio Benito Quinquela en La Plata. Educación de Nivel Inicial y Primario, talleres integrales, valores institucionales y propuesta pedagógica.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
