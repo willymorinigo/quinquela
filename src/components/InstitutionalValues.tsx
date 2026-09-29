@@ -52,11 +52,17 @@ export const InstitutionalValues: React.FC = () => {
           <div className="absolute right-0 top-0 translate-x-8 -translate-y-8 opacity-10 pointer-events-none">
             <QuinquelaSailIcon className="w-64 h-64 text-white" />
           </div>
-          <div className="relative z-10 max-w-3xl">
-            <p className="text-lg sm:text-xl font-medium italic text-sky-100 leading-relaxed">
+          <div className="relative z-10 max-w-3xl mx-auto">
+            <p 
+              className="italic text-sky-100 leading-relaxed"
+              style={{ textAlign: 'center', fontFamily: 'Times New Roman, serif', fontSize: '27px', fontWeight: 'bold' }}
+            >
               «El arte no es un privilegio de pocos, sino un derecho de todos para soñar, trabajar y transformar la realidad con color y dignidad.»
             </p>
-            <div className="mt-4 flex items-center gap-3">
+            <div 
+              className="mt-4 flex items-center justify-center gap-3"
+              style={{ textAlign: 'center' }}
+            >
               <div className="w-8 h-0.5 bg-amber-400" />
               <span className="text-xs sm:text-sm font-semibold tracking-wide text-amber-300">
                 Ideario del Colegio Benito Quinquela
